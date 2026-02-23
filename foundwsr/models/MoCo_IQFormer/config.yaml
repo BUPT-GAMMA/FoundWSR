@@ -1,0 +1,22 @@
+# train_test config
+lr: 1e-3
+batch_size: 256
+test_size: 0.2
+num_epochs: 15
+optimizer: AdamW
+weight_decay: 0.01
+patience: 1000
+evaluate_interval: 1
+signal_length: 128
+plot: False
+compile_flag: False
+compile:
+  mode: default
+  fullgraph: False
+  dynamic: null
+# network config
+dim: 256
+mlp_dim: 4096
+T: 1.0
+moco_m_cos: False
+moco_m: 0.99

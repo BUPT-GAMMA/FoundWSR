@@ -1,0 +1,32 @@
+# train_test config
+lr: 1e-3
+batch_size: 256
+test_size: 0.2
+val_size: 0.25
+num_epochs: 15
+optimizer: AdamW
+weight_decay: 0.01
+patience: 1000
+evaluate_interval: 5
+signal_length: 128
+plot: False
+compile_flag: False
+compile:
+  mode: default
+  fullgraph: False
+  dynamic: null
+# network config
+layers: [2, 3, 2]
+embed_dims: [64, 64, 64]
+mlp_ratios: 4
+act_layer: nn.GELU
+num_classes: 11
+down_patch_size: 5
+down_stride: 32
+down_pad: 1
+drop_rate: 0.2
+drop_path_rate: 0.
+use_layer_scale: False
+layer_scale_init_value: 1e-5
+fork_feat: False
+vit_num: 1

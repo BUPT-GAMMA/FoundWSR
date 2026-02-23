@@ -1,0 +1,28 @@
+# train_test config
+lr: 1e-5
+batch_size: 256
+test_size: 0.2
+val_size: 0.25
+num_epochs: 15
+optimizer: AdamW
+weight_decay: 0.01
+patience: 1000
+evaluate_interval: 5
+signal_length: 128
+plot: False
+compile_flag: False
+compile:
+  mode: default
+  fullgraph: False
+  dynamic: null
+# network config
+input_dim: 2
+hidden_dim: 256
+max_seq_length: 128
+mask_ratio: 0.3
+num_heads: 4
+dim_feedforward: 512
+num_layers: 8
+warmup_steps: 24000
+total_steps: 1707585
+noise_std: 0.001

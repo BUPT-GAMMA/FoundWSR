@@ -1,0 +1,34 @@
+# train_test config
+lr: 1e-4
+batch_size: 256
+test_size: 0.2
+val_size: 0.25
+num_epochs: 15
+optimizer: AdamW
+weight_decay: 0.01
+patience: 1000
+evaluate_interval: 5
+signal_length: 128
+plot: False
+compile_flag: False
+compile:
+  mode: default
+  fullgraph: False
+  dynamic: null
+# network config
+input_dim: 128
+extra_dim:
+  - 128
+embed_dim: 256
+hidden_dim: 512
+num_heads: 8
+num_block: 32
+dropout: 0.
+mlp_ratio: 4
+signal_diffusion: True
+max_step: 100
+# variance of the guassian blur applied on the spectrogram on each diffusion step [T]
+blur_noise: 1e-10
+# \beta_t noise level added to the signal on each diffusion step [T]
+min_noise: 1e-4
+max_noise: 0.003

@@ -1,0 +1,59 @@
+MoCo_IQFormer:
+  pretrain: moco_pretrain
+IQFormer:
+  amc: iqformer_trainer
+  wtc: iqformer_trainer
+SpectrumFM:
+  pretrain: spectrumfm_pretrain
+  amc: spectrumfm_tune
+  wtc: spectrumfm_tune
+AMC_Net:
+  amc: classification
+  wtc: classification
+CGDNN:
+  amc: classification
+  wtc: classification
+CNN2:
+  amc: classification
+  wtc: classification
+DAE:
+  amc: classification
+  wtc: classification
+DNN:
+  amc: classification
+  wtc: classification
+GRU2:
+  amc: classification
+  wtc: classification
+MCNet:
+  amc: classification
+  wtc: classification
+MSNet:
+  amc: classification
+  wtc: classification
+ResNet:
+  amc: classification
+  wtc: classification
+Transformer:
+  amc: classification
+  wtc: classification
+VGG:
+  amc: classification
+  wtc: classification
+LDM:
+  pretrain: ldm_pretrain
+  amc: ldm_tune
+  wtc: ldm_tune
+DDAE: ddae_trainer
+custom: 
+  open: open_set
+  custom: custom
+TSDDAE:
+  anomaly: anomaly
+  pretrain: tsddae_pretrain
+  amc: tsddae_tune
+  wtc: tsddae_tune
+  few_shot: few_shot
+  prob: prob
+  open: open_set
+signal: signal

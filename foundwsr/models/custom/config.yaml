@@ -1,0 +1,35 @@
+# train_test config
+lr: 1e-3
+batch_size: 256
+test_size: 0.2
+val_size: 0.25
+num_epochs: 15
+optimizer: AdamW
+weight_decay: 0.01
+patience: 1000
+evaluate_interval: 1
+signal_length: 128
+plot: False
+compile_flag: False
+compile:
+  mode: default
+  fullgraph: False
+  dynamic: null
+
+max_step: 3000
+timestep: 4
+ratio: 0.414
+min_noise: 5.45e-6
+max_noise: 0.0072
+
+# network config
+input_dim: 2
+hidden_dim: 256
+num_heads: 16
+dim_feedforward: 512
+num_layers: 4
+
+# extend_channel: 36
+# latent_dim: 512
+# num_heads: 2
+# conv_chan_list: null

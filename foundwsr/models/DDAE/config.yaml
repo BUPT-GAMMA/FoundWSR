@@ -1,0 +1,54 @@
+# train_test config
+lr: 1e-4
+batch_size: 256
+test_size: 0.2
+val_size: 0.25
+num_epochs: 15
+optimizer: AdamW
+weight_decay: 0.01
+patience: 1000
+evaluate_interval: 1
+signal_length: 128
+plot: False
+compile_flag: False
+compile:
+  mode: default
+  fullgraph: False
+  dynamic: null
+# network config
+max_step: 1000
+min_noise: 1e-8
+max_noise: 1e-6
+blur_noise: 1e-5
+
+# network:
+#   n_channels: 256
+#   ch_mults: [1, 2, 2, 2]
+#   is_attn: [False, True, False, False]
+#   dropout: 0.1
+#   n_blocks: 2
+#   use_res_for_updown: True
+#   attn_channels_per_head: None
+
+# # testing params
+# n_sample: 30
+
+# # linear probe
+# linear:
+#   n_epoch: 25
+#   batch_size: 512
+#   lrate: 1.0e-4
+#   timestep: 11
+#   blockname: 'out_6'
+#   patience: 15
+
+input_dim: 2
+hidden_dim: 256
+max_seq_length: 128
+# mask_ratio: 0.3
+num_heads: 4
+dim_feedforward: 512
+num_layers: 16
+warmup_steps: 24000
+total_steps: 1707585
+noise_std: 0.001
