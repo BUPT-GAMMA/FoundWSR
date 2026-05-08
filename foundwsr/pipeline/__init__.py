@@ -12,6 +12,7 @@ SUPPORTED_PIPES = {
     "tsddae_pretrain": "foundwsr.pipeline.tsddae_pretrain",
     "tsddae_tune": "foundwsr.pipeline.tsddae_tune",
     "few_shot": "foundwsr.pipeline.few_shot",
+    "pwcdiff": "foundwsr.pipeline.pwcdiff",
     "prob": "foundwsr.pipeline.prob",
 }
 

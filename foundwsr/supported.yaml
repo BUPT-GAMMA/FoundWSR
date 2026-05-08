@@ -44,9 +44,7 @@ LDM:
   pretrain: ldm_pretrain
   amc: ldm_tune
   wtc: ldm_tune
-DDAE: ddae_trainer
 custom: 
-  open: open_set
   custom: custom
 TSDDAE:
   anomaly: anomaly
@@ -55,5 +53,4 @@ TSDDAE:
   wtc: tsddae_tune
   few_shot: few_shot
   prob: prob
-  open: open_set
-signal: signal
+PWCDiff: pwcdiff

@@ -39,8 +39,10 @@ class RadChar(BaseDataset):
         if split not in self.split_list:
             raise ValueError(f"The split type {split} is not supported!")
 
-        self.split_id = self.split_list.index(split)
-        cache_key = (test_size, val_size, target_class)
+        if target_class is not None:
+            cache_key = (test_size, val_size, tuple(target_class))
+        else:
+            cache_key = (test_size, val_size, target_class)
 
         if cache_key not in RadChar._processed_splits_cache:
             if target_class is not None:

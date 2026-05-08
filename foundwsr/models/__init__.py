@@ -27,6 +27,7 @@ SUPPORTED_MODELS = {
     "custom_encoder": "foundwsr.models.custom.custom_encoder",
     "custom": "foundwsr.models.custom.custom",
     "TSDDAE": "foundwsr.models.TSDDAE.TSDDAE",
+    "PWCDiff": "foundwsr.models.PWCDiff.PWCDiff",
     "signal": "foundwsr.models.signal.signal"
 }
 

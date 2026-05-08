@@ -1,5 +1,7 @@
 import torch
 from torch.utils.data import Dataset
+from scipy.signal import stft
+from .signal_data_augmentation import data_augmentation
 
 def add_noise(x, std):
     noise = torch.randn_like(x, device=x.device) * std
@@ -45,3 +47,31 @@ class MaskedDataset(Dataset):
         masked_data, mask, pre_label = create_mask(noise_data, self.mask_ratio)
 
         return sample, label, snr, masked_data, mask, pre_label
+
+class MoCoPretrainDataset(Dataset):
+    def __init__(self, samples, labels, SNR):
+        self.samples = samples
+        self.SNR = SNR
+        self.labels = labels
+
+    def __len__(self):
+        return len(self.samples)
+
+    def __getitem__(self, idx):
+        _, _, stp = stft(self.samples[idx][0,:], 1.0, 'blackman', 31, 30, 128)
+        augmented_samples = data_augmentation(self.samples[idx])
+        _, _, stp_augmented = stft(augmented_samples[0,:], 1.0, 'blackman', 31, 30, 128)
+        
+        return self.samples[idx], augmented_samples, stp, stp_augmented
+
+class PretrainDataset(Dataset):
+    def __init__(self, samples, labels, SNR):
+        self.samples = samples
+        self.SNR = SNR
+        self.labels = labels
+
+    def __len__(self):
+        return len(self.samples)
+
+    def __getitem__(self, idx):
+        return self.samples[idx], self.SNR[idx]

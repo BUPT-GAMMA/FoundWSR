@@ -1,7 +1,7 @@
 import torch.nn.functional as F
 from . import BaseTask, register_task
 from ..dataset import build_dataset
-from ..dataset.masked import MaskedDataset
+from ..utils.dataset import MaskedDataset
 
 @register_task("masked_reconstruction")
 class MaskedReconstruction(BaseTask):

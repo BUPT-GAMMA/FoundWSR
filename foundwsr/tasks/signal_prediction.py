@@ -1,7 +1,7 @@
 import torch.nn.functional as F
 from . import BaseTask, register_task
 from ..dataset import build_dataset
-from ..dataset.pretrain import PretrainDataset
+from ..utils.dataset import PretrainDataset
 
 @register_task("signal_prediction")
 class SignalPrediction(BaseTask):

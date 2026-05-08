@@ -2,7 +2,7 @@
 
 This is a repository for building Wireless Signal Recognition (WSR) foundation models based on PyTorch, integrating various signal datasets, models, and model experiment pipelines. We try to provide a user-transparent and easy-to-use benchmarking interface.
 
-**Note**: This version is currently only used as an implementation reference for TS-DDAE [ICLR 2026]. Updates to this repository will be made gradually in the future.
+**Note**: This version is currently only used as an implementation reference for TS-DDAE [ICLR 2026] and PWC-Diff [ICML 2026]. Updates to this repository will be made gradually in the future.
 
 # Requirements and Installation
 
@@ -10,7 +10,7 @@ This is a repository for building Wireless Signal Recognition (WSR) foundation m
 - sklearn
 - scipy
 - pandas
-- cv2
+- opencv-python-headless
 - Optuna (if you want hyperparameters optimization)
 - matplotlib, seaborn (if you want visualization)
 
